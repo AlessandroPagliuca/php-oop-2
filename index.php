@@ -28,23 +28,30 @@ include __DIR__ . '/server/server.php';
 
 <body>
     <main class="d-flex justify-content-center align-items-center bg-dark">
-        <?php foreach ($products as $product) { ?>
-            <div class="card">
-                <img src="<?php echo $product->getImage(); ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p>
-                        <?php echo $product->getTitle(); ?>
-                    </p>
-                    <p>
-                        <?php echo $product->getPrice(); ?> €
-                    </p>
-                    <i class="<?php echo $product->getIconCategory(); ?>"></i>
-                    <p>
-                        <?php echo $product->getType(); ?>
-                    </p>
-                </div>
+        <div class="container h-100 pt-5">
+            <div class="row justify-content-center align-items-start">
+                <?php foreach ($products as $product) { ?>
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img src="<?php echo $product->getImage(); ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p>
+                                    <?php echo $product->getTitle(); ?>
+                                </p>
+                                <p>
+                                    <?php echo $product->getPrice(); ?> €
+                                </p>
+                                <i class="<?php echo $product->getIconCategory(); ?>"></i>
+                                <p>
+                                    <?php echo $product->getType(); ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
-        <?php } ?>
+        </div>
+
 
     </main>
 </body>
