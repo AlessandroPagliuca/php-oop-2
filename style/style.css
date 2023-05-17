@@ -5,4 +5,17 @@ main {
 .card {
     width: 250px;
     height: 250px;
+    border: 2px solid black;
+    cursor: pointer;
+
+
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
 }
