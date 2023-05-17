@@ -27,26 +27,29 @@ include __DIR__ . '/server/server.php';
 </head>
 
 <body>
-    <main class="d-flex justify-content-center align-items-center bg-dark">
+    <main class="bg-dark">
         <div class="container h-100 pt-5">
-            <div class="row justify-content-center align-items-start">
+            <div class="row">
                 <?php foreach ($products as $product) { ?>
                     <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./img/<?php echo $product->getImage(); ?>" class="" alt="...">
-                            <div class="card-body">
-                                <p class="text-primary fw-semibold">
-                                    <?php echo $product->getTitle(); ?>
-                                </p>
-                                <p class="text-success fw-semibold">
-                                    <?php echo $product->getPrice(); ?> €
-                                </p>
-                                <i class="<?php echo $product->getIconCategory(); ?> text-secondary fs-4"></i>
-                                <p class="text-primary fw-semibold">
-                                    <?php echo $product->getType(); ?>
-                                </p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="card m-4">
+                                <img src="./img/<?php echo $product->getImage(); ?>" class="" alt="...">
+                                <div class="card-body">
+                                    <p class="text-primary fw-semibold">
+                                        <?php echo $product->getTitle(); ?>
+                                    </p>
+                                    <p class="text-success fw-semibold">
+                                        <?php echo $product->getPrice(); ?> €
+                                    </p>
+                                    <i class="<?php echo $product->getIconCategory(); ?> text-secondary fs-4"></i>
+                                    <p class="text-primary fw-semibold">
+                                        <?php echo $product->getType(); ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 <?php } ?>
             </div>
