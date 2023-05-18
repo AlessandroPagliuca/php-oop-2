@@ -8,6 +8,7 @@ include __DIR__ . '/server/server.php';
 
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -43,9 +44,12 @@ include __DIR__ . '/server/server.php';
                                         <?php echo $product->getPrice(); ?> €
                                     </p>
                                     <i class="<?php echo $product->getIconCategory(); ?> text-secondary fs-4"></i>
-                                    <p class="text-primary fw-semibold">
+                                    <span class="text-primary fw-semibold">
                                         <?php echo $product->getType(); ?>
-                                    </p>
+                                    </span>
+                                    <span class="text-primary fw-semibold">
+                                        <?php echo $product->getBrand(); ?>
+                                    </span>
                                 </div>
                             </div>
                         </div>

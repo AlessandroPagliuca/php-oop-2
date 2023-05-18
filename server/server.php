@@ -8,3 +8,9 @@ $products = [
     new Card(3, "gatti-test.jpg", "Cuccia per gatti", 9.99, "Gatti", "Cuccia", "fa-solid fa-cat"),
 
 ];
+
+foreach ($products as $product) {
+    if ($product instanceof Card) {
+        $product->setBrand("/ Purina");
+    }
+}
